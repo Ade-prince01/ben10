@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #728308;
+  color: #fff;
+}
+
+html {
+  /* (62.5 /100) *16 = 10px */
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  color: #fff;
+  background-color: #728308;
+  padding: 2rem 0;
+  text-align: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+header h1 {
+  border: 0.8rem solid #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 3.6rem;
+  display: inline-block;
+}
+
+/* SECTION - BANNER */
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+  display: block;
+}
+
+.banner .welcome {
+  position: absolute;
+  left: 0;
+  top: 30%;
+
+  font-size: 6rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.banner .welcome span {
+  font-size: 1.5em;
+}
+/* Navigation Links */
+nav {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  position: sticky;
+  top: 10.4rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 0.5rem 6rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+nav li a:hover {
+  color: #1e1e1e;
+  text-decoration: underline;
+}
+
+nav li a.join {
+  color: #728308;
+}
+
+/* MAIN */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+article h2 {
+  color: #728308;
+  font-size: 4.2rem;
+  margin-bottom: 2rem;
+}
+
+article P {
+  font-size: 1.8rem;
+  color: #4b4b4b;
+  line-height: 3rem;
+}
+
+article p::first-line {
+  font-size: 3rem;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #728308;
+}
+
+article p::selection {
+  background: #728308;
+  color: #ffff;
+}
+
+/* SECTION - IMAGES */
+section.images {
+  text-align: center;
+  padding: 6rem 0;
+  background-attachment: scroll;
+  background-image: url("https://i.ibb.co/bQQbM15/ben10-background.png");
+}
+
+section.images img {
+  width: 32rem;
+  margin: 0 1rem;
+  vertical-align: middle;
+  transition: transform 0.25s ease-in-out;
+}
+
+section.images img:hover {
+  transform: scale(1.25);
+}
+
+/* SECTION - NEWSLETTER */
+section.newsletter {
+  padding: 6rem 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+  color: #4b4b4b;
+}
+
+section.newsletter h2 {
+  font-size: 3.4rem;
+  margin: 1rem 0;
+}
+
+section.newsletter p {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+form input {
+  background-color: #f8f9fa;
+  padding: 1.2rem 2rem;
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  border-radius: 3rem;
+  border: 4px solid #ced4da;
+  outline: none;
+}
+
+form input:focus:valid {
+  background-color: #f4fcef;
+  border: 4px solid #a9e34b;
+}
+
+form input:not(:placeholder-shown):invalid {
+  background-color: #fff5f5;
+  border: 4px solid #ff8787;
+}
+
+/* FOOTER */
+footer {
+  background-color: #728308;
+  color: #fff;
+  padding: 4rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* MEDIA QUERRIES */
+
+@media screen and (max-width: 1024px) {
+  .banner .welcome {
+    font-size: 4rem;
+    padding: 2rem;
+    top: 35%;
+  }
+
+  section.images img {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: static;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  nav ul li {
+    flex-basis: 40%;
+  }
+  section.images img {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem o;
+  }
+  .banner .welcome {
+    position: static;
+    color: initial;
+    border-radius: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+  section.images img {
+    width: 14rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    position: static;
+  }
+  nav ul li {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  article h2 {
+    font-size: 3rem;
+  }
+
+  article p {
+    font-size: 1.6rem;
+  }
+
+  section.images img {
+    width: 10rem;
+  }
+
+  section.newsletter {
+    padding: 4rem 2rem;
+  }
+
+  section.newsletter p {
+    font-size: 1.6rem;
+  }
+}
